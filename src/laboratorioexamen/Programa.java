@@ -18,6 +18,13 @@ public class Programa extends javax.swing.JFrame {
         initComponents();
     }
 
+    
+    
+    
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -193,6 +200,8 @@ public class Programa extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Carro", jPanel3);
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        jt_arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(jt_arbol);
 
         jLabel11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N

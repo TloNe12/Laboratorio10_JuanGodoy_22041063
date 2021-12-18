@@ -5,12 +5,14 @@
  */
 package laboratorioexamen;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jcgol
  */
 public class Programa extends javax.swing.JFrame {
-
+    ArrayList<Jugador> jugador = new ArrayList();
     /**
      * Creates new form Programa
      */
@@ -34,7 +36,7 @@ public class Programa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -55,7 +57,7 @@ public class Programa extends javax.swing.JFrame {
         jcb_tipo = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        jb_eliminar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_arbol = new javax.swing.JTree();
@@ -75,8 +77,6 @@ public class Programa extends javax.swing.JFrame {
         jl_vida = new javax.swing.JLabel();
         jl_estadoBatalla = new javax.swing.JLabel();
         jl_pelea = new javax.swing.JLabel();
-
-        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,6 +114,11 @@ public class Programa extends javax.swing.JFrame {
 
         jb_crear.setForeground(new java.awt.Color(0, 0, 0));
         jb_crear.setText("Crear");
+        jb_crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_crearMouseClicked(evt);
+            }
+        });
 
         jcb_tipo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcb_tipo.setForeground(new java.awt.Color(0, 0, 0));
@@ -123,8 +128,13 @@ public class Programa extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Eliminar Carro");
 
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Eliminar");
+        jb_eliminar.setForeground(new java.awt.Color(0, 0, 0));
+        jb_eliminar.setText("Eliminar");
+        jb_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_eliminarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -137,7 +147,7 @@ public class Programa extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel10)
                             .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)))
+                            .addComponent(jb_eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +204,7 @@ public class Programa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(jb_eliminar)
                 .addContainerGap(96, Short.MAX_VALUE))
         );
 
@@ -213,8 +223,18 @@ public class Programa extends javax.swing.JFrame {
         jLabel12.setText("Ciber Errol");
 
         jb_iniciar.setText("Iniciar Partida");
+        jb_iniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_iniciarMouseClicked(evt);
+            }
+        });
 
         jb_pausar.setText("Pausar Partida");
+        jb_pausar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_pausarMouseClicked(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
@@ -366,6 +386,22 @@ public class Programa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jb_iniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_iniciarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_iniciarMouseClicked
+
+    private void jb_pausarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_pausarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_pausarMouseClicked
+
+    private void jb_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_eliminarMouseClicked
+
+    private void jb_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_crearMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -402,9 +438,7 @@ public class Programa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -423,9 +457,11 @@ public class Programa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton jb_crear;
+    private javax.swing.JButton jb_eliminar;
     private javax.swing.JButton jb_iniciar;
     private javax.swing.JButton jb_pausar;
     private javax.swing.JComboBox<String> jcb_tipo;
